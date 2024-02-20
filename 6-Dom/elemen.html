@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elemen Pada Dom</title>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+
+    <div id="content" class="contentAja">
+      <h1 id="title" class="title">This is title</h1>
+      <p id="descriptionDua" class="descriptionDua">This is Description</p>
+    </div>
+
+    <div id="buatelement" class="buatelement"></div>
+
+    <script>
+      const title = document.getElementById('title');
+      title.textContent = 'Penerapan Elemen dengan DOM';
+
+      const description = document.getElementById('description');
+      description.textContent = 'Ini adalah deskripsi';
+
+      //? Element Property
+      const content = document.getElementById('content');
+      console.info(content.id);
+      console.info(content.className);
+      console.info(content.tagName);
+
+      const contentDua = document.getElementById('title');
+      console.log(contentDua.tagName);
+
+      //? Elemen Method
+      const contentTiga = document.getElementById('descriptionDua');
+      contentTiga.remove();
+
+      //? Buat Element
+      const buatelement = document.getElementById('buatelement');
+
+      const titleBuat = document.createElement('h2');
+      titleBuat.textContent = 'Ini create element';
+      buatelement.appendChild(titleBuat);
+
+      const descBuat = document.createElement('p');
+      descBuat.textContent = 'Ini create description';
+      buatelement.append(descBuat);
+    </script>
+  </body>
+</html>

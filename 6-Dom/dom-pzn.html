@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar DOM</title>
+  </head>
+  <body>
+    <p id="tulisan">Ini adalah Tulisan</p>
+
+    <ul id="menu">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+
+    <ul id="mobil">
+      <li id="fortuner">Fortuner</li>
+      <li id="hrv">HRV</li>
+      <li id="xpander">XPANDER</li>
+    </ul>
+
+    <script>
+      //? Property Document
+      console.info(document.title);
+
+      //?   Document Method
+      const tulisan = document.getElementById('tulisan');
+      console.log(tulisan);
+
+      //? Node
+      const menu = document.getElementById('menu');
+      console.log(menu);
+      console.log(menu.children);
+
+      const second = document.getElementById('second');
+      console.log(second);
+      console.log(second.previousSibling);
+      console.log(second.nextSibling);
+
+      //? Node Method (Bisa menghapus, menambah
+      const mobil = document.getElementById('mobil');
+      console.log(mobil);
+
+      mobil.removeChild(document.getElementById('xpander'));
+    </script>
+  </body>
+</html>

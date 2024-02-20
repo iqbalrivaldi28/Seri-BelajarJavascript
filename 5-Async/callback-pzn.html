@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback</title>
+  </head>
+  <body>
+    <h1 id="header"></h1>
+
+    <h2 id="headerDate"></h2>
+
+    <script>
+      const addElement = () => {
+        const header = document.createElement('h1');
+        header.textContent = 'Programer Zaman Now';
+
+        document.body.appendChild(header);
+      };
+
+      // Penerapan Asynchronous SetTimeOut
+      setTimeout(addElement, 5000);
+
+      const headerDate = document.getElementById('headerDate');
+      headerDate.textContent = new Date().toString();
+
+      document.appendChild.textContent;
+
+      // Penerapan Asychronous SetInterval
+      setInterval(headerDate, 1000);
+    </script>
+  </body>
+</html>

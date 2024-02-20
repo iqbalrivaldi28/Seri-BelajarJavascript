@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+  </head>
+  <body>
+    <input type="button" id="clickMe" value="Click Me yaa" />
+
+    <input type="button" id="alertBtn" value="Klik muncul alert" />
+
+    <script>
+      const clickMe = document.getElementById('clickMe');
+      clickMe.addEventListener('click', function () {
+        clickMe.setAttribute('value', 'you Already click me');
+      });
+
+      const btnAlert = document.getElementById('alertBtn');
+      btnAlert.addEventListener('mouseenter', function () {
+        alert('Tombol ini di klik');
+      });
+    </script>
+  </body>
+</html>
